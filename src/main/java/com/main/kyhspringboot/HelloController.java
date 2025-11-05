@@ -29,4 +29,26 @@ public class HelloController {
         return "hello" + name;
 
     }
+
+    @GetMapping("/hello-api")
+    @ResponseBody
+    //객체로 리턴하는 경우는 jsonConverter가 작동
+    public Hello helloApi(@RequestParam("name") String name) {
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello;
+    }
+
+    static class Hello {
+        private String name;
+
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+    }
 }
