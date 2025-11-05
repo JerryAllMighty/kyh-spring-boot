@@ -1,4 +1,4 @@
-package com.main.kyhspringboot;
+package com.main.kyhspringboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
